@@ -8,7 +8,7 @@ let lessons = [
     },
     {
         id: 2,
-        subject: 'Maths',
+        subject: 'English',
         location: 'London',
         price: 30,
         availableSpaces: 5

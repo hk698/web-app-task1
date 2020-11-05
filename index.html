@@ -16,14 +16,17 @@
          {{sitename}}
     </nav>
 
+    <button v-show="cartButtonVisible">{{noCartItems}} Cart</button>
     <main>
-        <div class="lesson">
+        <div class="lesson" v-for="lesson in lessons">
         <div class="image"></div>
         <div class="lessonInfo">
-            <h2 class="lessonName"></h2>
-            <div class="spaces"></div>
-            <div class="location"></div>
-            <div class="price"></div>
+            <h2 class="lessonName">{{lesson.subject}}</h2>
+            <div class="spaces">{{lesson.availableSpaces}}</div>
+            <div class="location">{{lesson.location}}</div>
+            <div class="price">£{{lesson.price}}</div>
+            <button v-on:click="addToCart(lesson)" :disabled="anySpacesLeft(lesson)">Add to cart</button>
+
         </div>
         </div>
 
