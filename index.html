@@ -36,7 +36,9 @@
         <div class="lessonList">
             <div class="lessonWrap" v-for="lesson in sortLessons">
                 <div class="lesson" >
-                    <div class="image"></div>
+                    <div class="image">
+                        <img v-bind:src="lesson.image">
+                    </div>
                     <div class="lessonInfo">
                         <h2 class="lessonName">{{lesson.subject}}</h2>
                         <div class="spaces">Spaces Left: {{lesson.availableSpaces}}</div>
