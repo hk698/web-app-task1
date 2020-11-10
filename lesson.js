@@ -4,7 +4,8 @@ let lessons = [
         subject: 'Maths',
         location: 'London',
         price: 30,
-        availableSpaces: 5
+        availableSpaces: 5,
+        image: 'image/maths.jpg'
     },
     {
         id: 2,
