@@ -48,6 +48,7 @@ main {
     padding: 15px;
 
 }
+
 .lesson {
     -moz-border-radius: 6px;
      -webkit-border-radius: 6px;
@@ -61,4 +62,10 @@ main {
      padding: 20px;
      width: 100%;
      
+}
+
+.lesson .image img{
+    width: 100%;
+    height: auto;
+    
 }
