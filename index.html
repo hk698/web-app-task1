@@ -16,22 +16,49 @@
          {{sitename}}
     </nav>
 
-    <button v-show="cartButtonVisible">{{noCartItems}} Cart</button>
-    <main>
-        <div class="lesson" v-for="lesson in lessons">
-        <div class="image"></div>
-        <div class="lessonInfo">
-            <h2 class="lessonName">{{lesson.subject}}</h2>
-            <div class="spaces">{{lesson.availableSpaces}}</div>
-            <div class="location">{{lesson.location}}</div>
-            <div class="price">£{{lesson.price}}</div>
-            <button v-on:click="addToCart(lesson)" :disabled="anySpacesLeft(lesson)">Add to cart</button>
-
+    
+    <main v-if="!showCartPage">
+        <div class="sortBy" >
+                <button v-show="cartButtonVisible" @click="showCartPage = true">{{noCartItems}} Cart</button>
+           <div class="order"> Sort By: 
+                <div v-for="item in sortByArray">
+                    <input name="sortBy" type="radio"  v-bind:value="item" v-model="selectBy"> 
+                    <label for="sortBy">{{item}}</label>
+                </div> 
+            </div>
+            <div class="order"> Order By: 
+                <div v-for="item in orderByArray">
+                    <input name="OrderBy" type="radio"  v-bind:value="item" v-model="selectOrder"> 
+                    <label for="OrderBy">{{item}}</label>
+                </div>
+            </div>
         </div>
+        <div class="lessonList">
+            <div class="lessonWrap" v-for="lesson in sortLessons">
+                <div class="lesson" >
+                    <div class="image"></div>
+                    <div class="lessonInfo">
+                        <h2 class="lessonName">{{lesson.subject}}</h2>
+                        <div class="spaces">Spaces Left: {{lesson.availableSpaces}}</div>
+                        <div class="location">{{lesson.location}}</div>
+                        <div class="price">£{{lesson.price}}</div>
+                        <button v-on:click="addToCart(lesson)" :disabled="anySpacesLeft(lesson)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
     
+    <div v-else>
+        <button @click="showCartPage = false"> Back</button>
+        <h2>Total {{getTotalPrice}}</h2>
+
+        <ul>
+            <li v-for="(elem, index) in cart">{{ elem.lesson.subject }} {{elem.noOfItem}} <button v-on:click="removeElemFromCart(index)">Remove</button> </li>
+        </ul>
+
+    </div>
 
 </div>
 

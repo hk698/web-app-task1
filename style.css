@@ -22,3 +22,43 @@ nav{
     font-size: 30px;
 
 }
+
+main {
+    display: flex;
+    width: 1200px;
+    margin: 50px auto;
+}
+
+.sortBy{
+    width: 100%;
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.lessonList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.order{
+    padding-top: 20PX;
+}
+.lessonWrap{
+    width: 33.3333%;
+    padding: 15px;
+
+}
+.lesson {
+    -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     background-color: #f0f7fb;
+     background-position: 9px 0px;
+     background-repeat: no-repeat;
+     border: solid 1px #3498db;
+     border-radius: 6px;
+     line-height: 18px;
+     overflow: hidden;
+     padding: 20px;
+     width: 100%;
+     
+}

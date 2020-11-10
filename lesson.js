@@ -9,15 +9,15 @@ let lessons = [
     {
         id: 2,
         subject: 'English',
-        location: 'London',
-        price: 30,
+        location: 'Leeds',
+        price: 20,
         availableSpaces: 5
     },
     {
         id: 3,
-        subject: 'Maths',
-        location: 'London',
-        price: 30,
+        subject: 'Geography',
+        location: 'Bradford',
+        price: 45,
         availableSpaces: 5
     },
     {
