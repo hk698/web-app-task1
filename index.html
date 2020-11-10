@@ -19,19 +19,21 @@
     
     <main v-if="!showCartPage">
         <div class="sortBy" >
-                <button v-show="cartButtonVisible" @click="showCartPage = true">{{noCartItems}} Cart</button>
-           <div class="order"> Sort By: 
-                <div v-for="item in sortByArray">
-                    <input name="sortBy" type="radio"  v-bind:value="item" v-model="selectBy"> 
-                    <label for="sortBy">{{item}}</label>
-                </div> 
-            </div>
-            <div class="order"> Order By: 
-                <div v-for="item in orderByArray">
-                    <input name="OrderBy" type="radio"  v-bind:value="item" v-model="selectOrder"> 
-                    <label for="OrderBy">{{item}}</label>
-                </div>
-            </div>
+                <div class="stickyBar"> 
+                        <button v-show="cartButtonVisible" @click="showCartPage = true">{{noCartItems}} Cart</button>
+                    <div class="order"> Sort By: 
+                        <div v-for="item in sortByArray">
+                            <input name="sortBy" type="radio"  v-bind:value="item" v-model="selectBy"> 
+                            <label for="sortBy">{{item}}</label>
+                        </div> 
+                    </div>
+                    <div class="order"> Order By: 
+                        <div v-for="item in orderByArray">
+                            <input name="OrderBy" type="radio"  v-bind:value="item" v-model="selectOrder"> 
+                            <label for="OrderBy">{{item}}</label>
+                        </div>
+                    </div>
+                </div>  
         </div>
         <div class="lessonList">
             <div class="lessonWrap" v-for="lesson in sortLessons">

@@ -33,6 +33,7 @@ main {
     width: 100%;
     min-width: 200px;
     max-width: 200px;
+    position: relative;
 }
 
 .lessonList{
@@ -68,4 +69,13 @@ main {
     width: 100%;
     height: auto;
     
+}
+
+.stickyBar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 50px;
+
 }
