@@ -12,62 +12,71 @@ let lessons = [
         subject: 'English',
         location: 'Leeds',
         price: 20,
-        availableSpaces: 5
+        availableSpaces: 5,
+        image: 'image/english.jpg'
     },
     {
         id: 3,
         subject: 'Geography',
         location: 'Bradford',
         price: 45,
-        availableSpaces: 5
+        availableSpaces: 5,
+        image: 'image/geography.jpg'
     },
     {
         id: 4,
-        subject: 'Maths',
+        subject: 'History',
         location: 'London',
         price: 30,
-        availableSpaces: 5
+        availableSpaces: 5,
+        image: 'image/history.jpg'
     },
     {
         id: 5,
-        subject: 'Maths',
+        subject: 'Science',
         location: 'London',
         price: 30,
-        availableSpaces: 5
+        availableSpaces: 5,
+        image: 'image/science.jpg'
     },
     {
         id: 6,
-        subject: 'Maths',
+        subject: 'Art & Design',
         location: 'London',
         price: 30,
-        availableSpaces: 5
+        availableSpaces: 5,
+        image: 'image/art.jpg'
     },
     {
         id: 7,
-        subject: 'Maths',
+        subject: 'Computing',
         location: 'London',
         price: 30,
-        availableSpaces: 5
+        availableSpaces: 5,
+        image: 'image/computing.jpg'
     },
     {
         id: 8,
-        subject: 'Maths',
+        subject: 'Foreign Language (Spanish)',
         location: 'London',
         price: 30,
-        availableSpaces: 5
+        availableSpaces: 5,
+        image: 'image/spanish.jpg'
     },
     {
         id: 9,
-        subject: 'Maths',
+        subject: 'Physical Education',
         location: 'London',
         price: 30,
-        availableSpaces: 5
+        availableSpaces: 5,
+        image: 'image/sport.jpg'
     },
     {
         id: 10,
-        subject: 'Maths',
+        subject: 'Religious Education',
         location: 'London',
         price: 30,
-        availableSpaces: 5
+        availableSpaces: 5,
+        image: 'image/religion.png'
     }
 ]

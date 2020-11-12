@@ -6,6 +6,7 @@
     <title>After school classes</title>
     <script src="https://unpkg.com/vue"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
     
@@ -20,7 +21,8 @@
     <main v-if="!showCartPage">
         <div class="sortBy" >
                 <div class="stickyBar"> 
-                        <button v-show="cartButtonVisible" @click="showCartPage = true">{{noCartItems}} Cart</button>
+                        <button v-show="cartButtonVisible" @click="showCartPage = true">{{noCartItems}} <i class="fas fa-shopping-cart"></i></button> 
+                           
                     <div class="order"> Sort By: 
                         <div v-for="item in sortByArray">
                             <input name="sortBy" type="radio"  v-bind:value="item" v-model="selectBy"> 
@@ -38,8 +40,8 @@
         <div class="lessonList">
             <div class="lessonWrap" v-for="lesson in sortLessons">
                 <div class="lesson" >
-                    <div class="image">
-                        <img v-bind:src="lesson.image">
+                    <div class="image" v-bind:style="{'background-image': 'url(' + lesson.image +')'}">
+                    
                     </div>
                     <div class="lessonInfo">
                         <h2 class="lessonName">{{lesson.subject}}</h2>
@@ -61,6 +63,11 @@
         <ul>
             <li v-for="(elem, index) in cart">{{ elem.lesson.subject }} {{elem.noOfItem}} <button v-on:click="removeElemFromCart(index)">Remove</button> </li>
         </ul>
+            Name:
+        <input type="text" name="" v-model="checkout.name">
+            Number:
+        <input type="text" name="" v-model="checkout.number">
+        <button >Checkout</button>
 
     </div>
 

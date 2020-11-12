@@ -4,11 +4,15 @@ let app = new Vue({
         sitename: 'After School Classes',
         lessons: lessons,
         cart:[],
-        sortByArray:['subject','location', 'price'],
+        sortByArray:['subject','location', 'price', 'availableSpaces'],
         selectBy: 'subject',
         orderByArray: ['ascending', 'descending'],
         selectOrder: 'ascending',
-        showCartPage: false
+        showCartPage: false,
+        checkout: {
+            name: '',
+            number: ''
+        }
     },
     methods: {
         addToCart(lesson){
