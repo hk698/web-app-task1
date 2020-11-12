@@ -83,6 +83,15 @@ let app = new Vue({
               
             });
             return total;
+        },
+        validCheckout(){
+            let testName= /^[a-zA-z]+$/.test(this.checkout.name);
+            let testNumber= /^\d+$/.test(this.checkout.number);
+
+            if (testName && this.checkout.name.length > 1 && testNumber){
+                return true;
+            }
+            return false;
         }
 
     

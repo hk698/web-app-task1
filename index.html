@@ -67,7 +67,7 @@
         <input type="text" name="" v-model="checkout.name">
             Number:
         <input type="text" name="" v-model="checkout.number">
-        <button >Checkout</button>
+        <button :disabled="!validCheckout || !noCartItems">Checkout</button>
 
     </div>
 

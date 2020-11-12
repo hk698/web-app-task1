@@ -57,7 +57,7 @@ let lessons = [
     },
     {
         id: 8,
-        subject: 'Foreign Language (Spanish)',
+        subject: 'Foreign Language',
         location: 'London',
         price: 30,
         availableSpaces: 5,
