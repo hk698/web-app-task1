@@ -12,7 +12,8 @@ let app = new Vue({
         checkout: {
             name: '',
             number: ''
-        }
+        },
+        showMessage: false
     },
     methods: {
         addToCart(lesson){
@@ -46,6 +47,11 @@ let app = new Vue({
         removeElemFromCart(id){
             this.cart[id].lesson.availableSpaces += this.cart[id].noOfItem;
             this.cart.splice(id, 1);
+        },
+        
+        checkoutFinish(){
+            this.cart = [];
+            this.showMessage = true;
         }
     },
     computed:{
@@ -85,14 +91,16 @@ let app = new Vue({
             return total;
         },
         validCheckout(){
-            let testName= /^[a-zA-z]+$/.test(this.checkout.name);
+            let testName= /^[a-zA-Z\s]*$/.test(this.checkout.name);
             let testNumber= /^\d+$/.test(this.checkout.number);
 
             if (testName && this.checkout.name.length > 1 && testNumber){
                 return true;
             }
             return false;
-        }
+        },
+
+    
 
     
 
