@@ -71,11 +71,11 @@
                         Payment details:
                         <div class="inputName">
                                <div> Name: </div>
-                                <input type="text" name="" v-model="checkout.name">
+                                <input type="text" name="" :placeholder="[[placeholder]]" v-model="checkout.name">
                         </div>  
                         <div class="inputNumber">         
                             <div>   Number: </div> 
-                                <input type="text" name="" v-model="checkout.number">
+                                <input type="text" name="" :placeholder="[[placeholder2]]" v-model="checkout.number">
                         </div>        
                                 <button class="checkoutButton" :disabled="!validCheckout || !noCartItems" @click="checkoutFinish">Checkout</button>
                     

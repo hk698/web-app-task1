@@ -2,6 +2,7 @@ let app = new Vue({
     el: '#app',
     data: {
         sitename: 'After School Classes',
+        task: 'Please select a lesson',
         lessons: lessons,
         cart:[],
         sortByArray:['subject','location', 'price', 'availableSpaces'],
@@ -13,7 +14,9 @@ let app = new Vue({
             name: '',
             number: ''
         },
-        showMessage: false
+        showMessage: false,
+        placeholder: 'Your Name',
+        placeholder2:'Mobile Number'
     },
     methods: {
         addToCart(lesson){
@@ -94,7 +97,7 @@ let app = new Vue({
             let testName= /^[a-zA-Z\s]*$/.test(this.checkout.name);
             let testNumber= /^\d+$/.test(this.checkout.number);
 
-            if (testName && this.checkout.name.length > 1 && testNumber){
+            if (testName && this.checkout.name.length > 0 && testNumber){
                 return true;
             }
             return false;
